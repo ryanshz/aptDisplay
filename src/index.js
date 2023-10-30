@@ -7,7 +7,7 @@ const __dirname=import.meta.url.split("///")[1].split("index")[0];
 
 
 app.all("/",(req,res)=>{
-    res.sendFile(__dirname+"index.html")
+    res.sendFile("/"+__dirname+"index.html")
     console.log(__dirname+"index.html")
 })
 
@@ -17,6 +17,8 @@ app.get("/index.css",(req,res)=>{
 })
 
 app.listen(port,()=>{
+    console.log(`Server started at: http://localhost:${port}`);
+    console.log(`To stop server, use CTRL + C`);
     if(os.platform()=="linux"&&os.arch()=="arm"){
         child_process.exec(`DISPLAY=:0 chromium-browser --kiosk http://127.0.0.1:${port}`,function(error, stdout, stderr) {
             console.dir(stdout);
