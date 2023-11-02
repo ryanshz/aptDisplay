@@ -8,7 +8,7 @@ if(os.platform()=="win32") __dirname=import.meta.url.split("///")[1].split("inde
 
 
 app.all("/",(req,res)=>{
-    res.sendFile("/"+__dirname+"index.html")
+    res.sendFile(__dirname+"index.html")
     console.log(__dirname+"index.html")
 })
 
