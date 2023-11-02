@@ -3,7 +3,8 @@ import child_process from "child_process"
 import express from "express";
 const app=express()
 const port=8081;
-const __dirname=import.meta.url.split("///")[1].split("index")[0];
+let __dirname="/"+import.meta.url.split("///")[1].split("index")[0];
+if(os.platform()=="win32") __dirname=import.meta.url.split("///")[1].split("index")[0];
 
 
 app.all("/",(req,res)=>{
@@ -12,8 +13,9 @@ app.all("/",(req,res)=>{
 })
 
 
-app.get("/index.css",(req,res)=>{
-    res.sendFile(__dirname+"index.css")
+app.get("/default.css",(req,res)=>{
+    res.sendFile(__dirname+"default.css")
+    console.log(__dirname+"default.css")
 })
 
 app.listen(port,()=>{
