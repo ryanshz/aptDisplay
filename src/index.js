@@ -17,6 +17,16 @@ app.get("/aptDisplayBackground.jpg",(req,res)=>{
     console.log(__dirname+"aptDisplayBackground.jpg")
 })
 
+app.get("/subwaysurfer.png",(req,res)=>{
+    res.sendFile(__dirname+"subwaysurfer.png")
+    console.log(__dirname+"subwaysurfer.png")
+})
+
+app.get("/sunny.jpg",(req,res)=>{
+    res.sendFile(__dirname+"sunny.jpg")
+    console.log(__dirname+"sunny.jpg")
+})
+
 app.get("/default.css",(req,res)=>{
     res.sendFile(__dirname+"default.css")
     console.log(__dirname+"default.css")
