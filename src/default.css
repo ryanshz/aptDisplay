@@ -1,3 +1,86 @@
-body {
-    background-color: rgb(90, 79, 79);
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+:root{
+    --bg: rgba(0, 0, 0, 0.5);
+    --border: #111111;
+    --shadow: #111111;
+    --font: #fff;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url(aptDisplayBackground.jpg);
+    font-family: 'JetBrains Mono', monospace;
+    height: 100vh;
+    color: var(--font);
+}
+header, main{
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+#clock, #ticker, #weather, #subway, #class{
+    background-color: var(--bg);
+    border: 5px solid var(--border);
+    border-radius: 1rem;
+    box-shadow: 3px 3px 15px var(--border), inset 3px 3px 10px var(--border);
+}
+#clock, #ticker{
+    text-align: center;
+    margin-top: 1.5rem;
+    padding: 2rem 1rem;
+}
+#clock{
+    width: 25%;
+    height: 25%;
+    margin-left: 1.5rem;
+}
+h1{
+    font-size: 60px;
+}
+h2{
+    font-size: 20px;
+}
+#ticker{
+    width: 75%;
+    height: 25%;
+    margin-right: 1.5rem;
+}
+#weather, #subway, #class{
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+}
+#weather{
+    width: 25%;
+    height: 75%;
+    margin-left: 1.5rem;
+}   
+#subway{
+    width: 25%;
+    height: 75%;
+}   
+#class{
+    text-align: center;
+    width: 50%;
+    height: 75%;
+    margin-right: 1.5rem;
+}
+#class>h1{
+    margin: 1.5rem;
+}
+#class>div{
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+.roommate{
+    height: 125px;
+    width: 250px;
+    background-color: var(--bg);
+    border: 5px solid var(--border);
+    border-radius: 1rem;
+    box-shadow: 3px 3px 15px var(--border), inset 3px 3px 10px var(--border);
+    padding: 3rem;
 }

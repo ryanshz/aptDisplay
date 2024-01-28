@@ -1,4 +1,4 @@
-# aptDisplay - A customizable GUI for your monitor!
+# aptDisplay - A customizable GUI for your monitor
 
 aptDisplay is meant to act as an all-in-one solution for basic utilites, such as date, time, and weather, all on one screen!
 
