@@ -8,23 +8,23 @@ let __dirname="/"+import.meta.url.split("///")[1].split("index")[0];
 if(os.platform()=="win32") __dirname=import.meta.url.split("///")[1].split("index")[0];
 
 app.all("/",(req,res)=>{
-    res.sendFile("/"+__dirname+"index.html")
+    res.sendFile(__dirname+"index.html")
     console.log(__dirname+"index.html")
 })
 
 app.get("/aptDisplayBackground.jpg",(req,res)=>{
-    res.sendFile(__dirname+"aptDisplayBackground.jpg")
-    console.log(__dirname+"aptDisplayBackground.jpg")
+    res.sendFile(__dirname+"images/aptDisplayBackground.jpg")
+    console.log(__dirname+"images/aptDisplayBackground.jpg")
 })
 
 app.get("/subwaysurfer.png",(req,res)=>{
-    res.sendFile(__dirname+"subwaysurfer.png")
-    console.log(__dirname+"subwaysurfer.png")
+    res.sendFile(__dirname+"images/subwaysurfer.png")
+    console.log(__dirname+"images/subwaysurfer.png")
 })
 
 app.get("/sunny.jpg",(req,res)=>{
-    res.sendFile(__dirname+"sunny.jpg")
-    console.log(__dirname+"sunny.jpg")
+    res.sendFile(__dirname+"images/sunny.jpg")
+    console.log(__dirname+"images/sunny.jpg")
 })
 
 app.get("/default.css",(req,res)=>{
